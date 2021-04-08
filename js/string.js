@@ -9,12 +9,7 @@ export function capitalize(word) {
 
 // concatenate an array of words and have them in CamelCase
 export function camelize(words) {
-  if (!words) {
-    return words;
-  }
-  if (words.length === 0 ) {
-    return [];
-  };
+  if (!words || words.length === 0) return words;
 
-  return words.map(word => capitalize(word)).join('');
+  return words.map(capitalize).join('');
 }
